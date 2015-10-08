@@ -1,0 +1,59 @@
+
+public class Bobin
+{
+
+	String m_name = null;
+	int m_age = -1;
+	String m_address = null;
+	String m_phoneNumber = null;
+	
+	Bobin(String name, int age, String address, String phoneNumber)
+	{
+		m_name = name;
+		m_age = age;
+		m_address = address;
+		m_phoneNumber = phoneNumber;
+	}
+	
+	String GetName()
+	{
+		return m_name;
+	}
+	
+	void SetName(String name)
+	{
+		m_name = name;
+	}
+	
+	int GetAge()
+	{
+		return m_age;
+	}
+	
+	void SetAge(int age)
+	{
+		m_age = age;
+	}
+	
+	String GetAddress()
+	{
+		return m_address;
+	}
+	
+	void SetAddress(String address)
+	{
+		m_address = address;
+	}
+	
+	String GetPhoneNumber()
+	{
+		return m_phoneNumber;
+	}
+	
+	void SetPhoneNumber(String phoneNumber)
+	{
+		m_phoneNumber = phoneNumber;
+	}
+	
+
+}

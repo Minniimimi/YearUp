@@ -1,0 +1,18 @@
+
+public class Main {
+
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+
+		Bobin myBobby = new Bobin("Bobby", 20, "airplane", "000");
+		System.out.println(" Bobin's name is " + myBobby.GetName());
+		System.out.println(" Bobin's age is " + myBobby.GetAge());
+		System.out.println(" Bobin's address is " + myBobby.GetAddress());
+		System.out.println(" Bobin's phoneNumber is " + myBobby.GetPhoneNumber());
+		System.out.println("It's Bobby's birthday!");
+		myBobby.GrowsOlder();
+		System.out.println(" Bobin's age is " + myBobby.GetAge());
+	}
+
+}
