@@ -1,9 +1,11 @@
 import java.util.Scanner;
 
-public class reTest
+public class YearsTillGraduation
 {
-	public static void main (String args[])
+
+	public static void main(String args[])
 	{
+	
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter current high school grade:");
 		int inputGrade = sc.nextInt();
@@ -11,27 +13,28 @@ public class reTest
 		EvaluateYearsTillGraduation(inputGrade);
 		sc.close();
 	}
-	
-		public static void EvaluateYearsTillGraduation(int inputGrade)
+		
+			public static void EvaluateYearsTillGraduation(int inputGrade)
 		{
 			int yearDifference = 12 - inputGrade;
-					
+						
 			switch (yearDifference)
 			{
 				case 0:
-					System.out.println("You have 0 more years.");
+					System.out.println("You are graduating this year.");
 					break;
 				case 1:
-					System.out.println("You have 1 more years.");
-				break;
+					System.out.println("You have 1 more year.");
+					break;
 				case 2:
 					System.out.println("You have 2 more years.");
-				break;
+					break;
 				case 3:
 					System.out.println("You have 3 more years.");
-				break;
+					break;
 				default:
 					System.out.println("You are in college.");
 			}
 		}
 }
+
