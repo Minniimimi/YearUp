@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class iKonMember {
+	
+	public static void main (String args[]) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter iKon member:");
+		String iKonMember = sc.nextLine();
+		EvaluateMember(iKonMember);
+		sc.close();
+	}
+	
+	public static void EvaluateMember(String iKonMember) {
+		
+		if (iKonMember != null) {
+			if (!iKonMember.isEmpty()) {
+				if (iKonMember. equals("Bobby")||
+						iKonMember.equals("Jiwon")||
+						iKonMember.equals("B.I")||
+						iKonMember.equals("Hanbin")||
+						iKonMember.equals("Jinhwan")||
+						iKonMember.equals("Jonhoe")||
+						iKonMember.equals("Donghyuk")||
+						iKonMember.equals("Yunhyeong")) {
+					System.out.println(iKonMember + " is an original member.");
+				}
+				
+				else if (iKonMember.equals("Chanwoo")) {
+						System.out.println(iKonMember + " is not an original member.");
+					}
+			
+				else if (iKonMember.equals("Jinhyung")||
+						iKonMember.equals("Hongseok")) {
+						System.out.println(iKonMember + " did not make it into iKon.");
+					}
+			
+					else {
+							System.out.println (iKonMember + " is not a valid entry.");
+						}
+			}
+				else {
+						System.out.println ("iKon Member is an empty string.");
+					}
+			}
+			else {
+					System.out.println ("You have given me a null string.");
+				}
+			}
+		}
