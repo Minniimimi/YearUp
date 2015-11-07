@@ -15,29 +15,29 @@ public class iKonMember {
 		if (iKonMember != null) {
 			if (!iKonMember.isEmpty()) {
 				if (iKonMember. equals("Bobby")||
-						iKonMember.equals("Jiwon")||
-						iKonMember.equals("B.I")||
-						iKonMember.equals("Hanbin")||
-						iKonMember.equals("Jinhwan")||
-						iKonMember.equals("Jonhoe")||
-						iKonMember.equals("Donghyuk")||
-						iKonMember.equals("Yunhyeong")) {
+						iKonMember.equalsIgnoreCase("Jiwon")||
+						iKonMember.equalsIgnoreCase("B.I")||
+						iKonMember.equalsIgnoreCase("Hanbin")||
+						iKonMember.equalsIgnoreCase("Jinhwan")||
+						iKonMember.equalsIgnoreCase("Jonhoe")||
+						iKonMember.equalsIgnoreCase("Donghyuk")||
+						iKonMember.equalsIgnoreCase("Yunhyeong")) {
 					System.out.println(iKonMember + " is an original member.");
 				}
 				
-				else if (iKonMember.equals("Chanwoo")) {
+				else if (iKonMember.equalsIgnoreCase("Chanwoo")) {
 						System.out.println(iKonMember + " is not an original member.");
 					}
 			
-				else if (iKonMember.equals("Jinhyung")||
-						iKonMember.equals("Hongseok")) {
+				else if (iKonMember.equalsIgnoreCase("Jinhyung")||
+						iKonMember.equalsIgnoreCase("Hongseok")) {
 						System.out.println(iKonMember + " did not make it into iKon.");
 					}
 			
 					else {
 							System.out.println (iKonMember + " is not a valid entry.");
 						}
-			}
+				}
 				else {
 						System.out.println ("iKon Member is an empty string.");
 					}
