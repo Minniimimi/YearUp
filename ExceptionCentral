@@ -1,0 +1,48 @@
+
+public class ExceptionCentral {
+
+	public static void main(String[] args) {
+		ArithmeticException();
+		NullPointerException();
+		ArrayIndexOutOfBoundsException();
+	}
+	public static void ArithmeticException() {
+		try {
+			int y, x, answer;
+			y = 0;
+			x = 2;
+			answer = x/y;
+			
+			System.out.println("Answer: " + answer);
+			}
+		catch (ArithmeticException e) {
+			System.out.println("throws ArithmeticException");
+		}
+	}
+		
+	public static void NullPointerException() {
+		try {
+			String y = null;
+			System.out.println(y.length());
+		}
+		catch (NullPointerException e) {
+			System.out.println("throws a NullPointerException");
+		}
+	}
+	public static void ArrayIndexOutOfBoundsException() {
+		try {
+			int y [] = new int [10];
+			
+			if (y [11] == 9) {
+				System.out.println("Is correct");
+			}
+			else {
+				System.out.println("Is wrong");
+			}
+		}
+		catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("ERROR");
+		}
+		
+	}
+}
