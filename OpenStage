@@ -8,8 +8,8 @@ public class OpenStage {
 		
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run () {
-				JFrame cuteFrame = new MainFrame("Simple CUTE GUI");
-				cuteFrame.setSize(250,500);
+				JFrame cuteFrame = new MainFrame();
+				cuteFrame.setSize(225,500);
 				
 				cuteFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				cuteFrame.setVisible(true);
