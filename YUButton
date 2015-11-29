@@ -1,0 +1,75 @@
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+import javax.swing.JButton;
+
+public class YUButton implements ActionListener {
+MainFrame myFrame;
+	
+	// create a new constructor that gives us access to the parent window's frame
+	public YUButton (MainFrame mainFrame)
+	{
+		myFrame = mainFrame;
+	}
+
+	/*
+	 * This class implements the ActionListener interface and so it we must have an
+	 * actionPerformed method to handle the button events from the main frame
+	 */
+	public void actionPerformed(ActionEvent event)
+	{
+		// check the ActionEvent source to figure out which button was clicked
+		JButton clickedButton = (JButton)event.getSource();
+		
+		if (clickedButton == myFrame.button)
+		{
+			// enter button was clicked
+			handleButtonClicked();
+		}
+		else if (clickedButton == myFrame.iButton)
+		{
+			// clear button was clicked
+			handleIButtonClicked();
+		}
+		/*else 
+		{
+			// the done button was clicked
+			myFrame.exit();
+		}*/
+
+	}
+	
+	private void handleButtonClicked ()
+	{
+		// the enter button was pressed so get the input values from the 
+		// text buttons and update the welcome label
+		
+		String student = myFrame.textField.getText();
+				
+		String message = null;
+		if (!student.equals(""))
+		{
+			message = student + " is a student in Year Up";
+					
+		}
+		else
+		{
+			// user didn't enter one of the text input values so give them a
+			// notice to make sure they enter proper values
+			message = "Please enter your name and age";
+		}
+				
+		myFrame.responseLabel.setText (message);
+	}
+	
+	
+	private void handleIButtonClicked()
+	{
+		System.out.println ("Clear button clicked");
+		
+		// the clear button was pressed so clear everything out
+		myFrame.textField.setText("");
+		myFrame.iTextField.setText("");
+		myFrame.responseLabel.setText("");
+	}
+}
