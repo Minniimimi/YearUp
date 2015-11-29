@@ -1,15 +1,29 @@
 import java.awt.Container;
 import java.awt.FlowLayout;
+//import java.awt.event.ActionEvent;
+//import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+//import javax.swing.JSeparator;
 
 
-@SuppressWarnings("serial")
+
+//@SuppressWarnings("serial")
 public class MainFrame extends JFrame {
-	public MainFrame(String title) {
-		super(title);
+	
+	protected JLabel label;
+	protected JLabel iLabel;
+	protected JLabel responseLabel;
+	protected JTextField textField;
+	protected JTextField iTextField;
+	protected JButton button;
+	protected JButton iButton;
+	//protected JButton done;
+	
+	public MainFrame() {
 		
 		setLayout(new FlowLayout());
 		JLabel label = new JLabel("My name is:");
@@ -18,9 +32,21 @@ public class MainFrame extends JFrame {
 		JLabel iLabel = new JLabel("I am:");
 		JTextField iTextField = new JTextField(10);
 		
-		JLabel YULabel = new JLabel("I am a student of Year Up!");
+		JLabel responseLabel = new JLabel("");
+		//JLabel YULabel = new JLabel(" is a student of Year Up!");
 
 		JButton button = new JButton("Who are you?");
+		
+		JButton iButton = new JButton("Clear");
+		
+		//JButton done = new JButton("Done");
+		
+		button.addActionListener (new YUButton(this));
+		
+		iButton.addActionListener (new YUButton(this));
+		
+		//done.addActionListener(new YUButton(this));
+		
 		
 		Container content = getContentPane();
 		
@@ -29,7 +55,31 @@ public class MainFrame extends JFrame {
 		content.add(textField);
 		content.add(iLabel);
 		content.add(iTextField);
-		content.add(YULabel);
+		content.add(responseLabel);
+		//content.add(YULabel);
 		content.add(button);
+		content.add(iButton);
+		//content.add(done);
 	}
+
+	/*protected void exit()
+	{
+		System.out.println("Good bye");
+		System.exit(0);
+	}
+	
+
+	public static void main(String[] args) {
+		
+		MainFrame frame = new MainFrame();
+		
+		frame.addWindowListener(new java.awt.event.WindowAdapter() {
+		    @Override
+		    public void windowClosing(java.awt.event.WindowEvent windowEvent) 
+		    {
+		    	frame.exit();
+		    }
+		});
+	}*/
+
 }
