@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class PalindromeWithScanner {
 
 	public static void main(String[] args) {
+		System.out.println("Enter word or phrase here: \n");
 		Scanner y = new Scanner(System.in);
 		String unit = y.nextLine();
 		
