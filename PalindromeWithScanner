@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class PalindromeWithScanner {
+
+	public static void main(String[] args) {
+		Scanner y = new Scanner(System.in);
+		String unit = y.nextLine();
+		
+		posPal(unit);
+		
+		boolean maybePal = posPal(unit);
+		if (maybePal) {
+			System.out.println("This is a palindrome");
+			}
+		else {
+			System.out.println("This is not a palindrome");
+			}
+		y.close();
+	}
+		
+		public static boolean posPal(String word) {
+			boolean posPal = true;
+			if (word != null) {
+				String wordNoSpaces = word.replace(" ","").toLowerCase();
+				char[] wordArray = wordNoSpaces.toCharArray();
+				
+				for (int i = 0, k = wordArray.length - 1; i < wordArray.length/2; i++, k--) {
+					if (wordArray[i] != wordArray[k]) {
+						posPal = false;
+						break;
+					}
+				}
+			}
+			else {
+				System.out.println("You gave me a null string");
+				posPal = false;
+			}
+			return posPal;
+		}
+	}
+
+
