@@ -6,6 +6,8 @@ public class LCRoster {
 		LCRoster LC3 = new LCRoster("piSquad", 24);
 		System.out.println("LC3's name is " + LC3.getName());
 		System.out.println("LC3 has " + LC3.getID() + " people");
+		
+		studentArray (LC3.getListedStudents());
 		}
 	
 	
@@ -15,7 +17,7 @@ public class LCRoster {
 			}
 	String LCName = "piSquad";
 	int LCID = 24;
-	String[] listedStudent = {"Katie, Clarice, John"};
+	String[] listedStudents = {"Brandon, Kinsler, Dionne"};
 	
 	 public String getName() {
 		return LCName;
@@ -34,14 +36,14 @@ public class LCRoster {
 	}
 	
 	public String[] getListedStudents () {
-		return listedStudent;
+		return listedStudents;
 	}
-	public static String[] studentArray (String [] list) {
-		if (list != null) {
-			for (int i = 0; i < list.length; i++) {
-				System.out.println(list);
+	public static String[] studentArray (String [] listedStudents) {
+		if (listedStudents != null) {
+			for (String y: listedStudents) {
+				System.out.println(y + " are students of LC3");
 			}
-		}return list;
+		}return listedStudents;
 	}
 }
 
