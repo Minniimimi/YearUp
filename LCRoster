@@ -1,0 +1,47 @@
+
+public class LCRoster {
+	public static void main(String[] args) {
+		
+		
+		LCRoster LC3 = new LCRoster("piSquad", 24);
+		System.out.println("LC3's name is " + LC3.getName());
+		System.out.println("LC3 has " + LC3.getID() + " people");
+		}
+	
+	
+		public LCRoster(String name,int ID) {
+			setName(name);
+			setID(ID);
+			}
+	String LCName = "piSquad";
+	int LCID = 24;
+	String[] listedStudent = {"Katie, Clarice, John"};
+	
+	 public String getName() {
+		return LCName;
+	}
+	 
+	private void setName (String name) {
+		LCName = name;
+	}
+	
+	public int getID() {
+		return LCID;
+	}
+	
+	private void setID (int ID) {
+		LCID = ID;
+	}
+	
+	public String[] getListedStudents () {
+		return listedStudent;
+	}
+	public static String[] studentArray (String [] list) {
+		if (list != null) {
+			for (int i = 0; i < list.length; i++) {
+				System.out.println(list);
+			}
+		}return list;
+	}
+}
+
