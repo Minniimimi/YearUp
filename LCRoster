@@ -1,23 +1,14 @@
 
 public class LCRoster {
-	public static void main(String[] args) {
-		
-		
-		LCRoster LC3 = new LCRoster("piSquad", 24);
-		System.out.println("LC3's name is " + LC3.getName());
-		System.out.println("LC3 has " + LC3.getID() + " people");
-		
-		studentArray (LC3.getListedStudents());
-		}
 	
-	
-		public LCRoster(String name,int ID) {
-			setName(name);
-			setID(ID);
-			}
 	String LCName = "piSquad";
 	int LCID = 24;
 	String[] listedStudents = {"Brandon, Kinsler, Dionne"};
+	
+	public LCRoster(String name,int ID) {
+		setName(name);
+		setID(ID);
+		}
 	
 	 public String getName() {
 		return LCName;
