@@ -1,0 +1,66 @@
+
+public class PayRoll {
+	
+	private String employeeName = null;
+	private double salary = 0;
+	private double taxPercentage = 0;
+	private double benefits = 0;
+	
+	public static void main(String[] args) {
+		PayRoll YearUp = new PayRoll("Amy Park", 5, .1 , 5000);
+		YearUp.CreatePayCheck();
+		YearUp.setEmployeeName("Not Amy Park");
+		System.out.println(YearUp.getSalary());
+
+		
+	}
+	
+	public PayRoll(String m_employeeName, double m_salary, double m_taxPercentage, double m_benefits)
+	{
+		setEmployeeName(m_employeeName);
+		setSalary(m_salary);
+		setTaxPercentage(m_taxPercentage);
+		setBenefits(m_benefits);
+	}
+
+	private double CreatePayCheck() {
+		double paycheck = salary - (salary * taxPercentage + benefits);
+		return paycheck;	
+			
+		
+	}
+	
+
+	public String getEmployeeName() {
+		return employeeName;
+	}
+
+	private void setEmployeeName(String m_employeeName) {
+		employeeName = m_employeeName;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	private void setSalary(double m_salary) {
+		salary = m_salary;
+	}
+
+	public double getTaxPercentage() {
+		return taxPercentage;
+	}
+
+	private void setTaxPercentage(double m_taxPercentage) {
+		taxPercentage = m_taxPercentage;
+	}
+
+	public double getBenefits() {
+		return benefits;
+	}
+
+	private void setBenefits(double m_benefits) {
+		benefits = m_benefits;
+	}
+
+}
